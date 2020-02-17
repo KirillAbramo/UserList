@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
   }
   delete(person: IPerson) {
     this.editStatus = false;
+    this.userID = person.id;
     const index = this.users.findIndex(p => p.id === this.userID);
     this.users.splice(index, 1);
 
